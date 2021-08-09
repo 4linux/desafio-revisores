@@ -20,5 +20,8 @@ Para realizar as alterações, você pode usar a própria interface do github cl
 
 Para realizar o pull request, basta criar um novo pull request através do menu pull request e clicar no botão verde "New Pull Request".
 
-Qualquer dúvida envie no seguinte endereço: anderson.anaya@4linux.com.br
 
+## Critérios de edição
+
+Apenas revisar os trechos que não são códigos. Os códigos geralmente estão separados por crase ( `\``).  
+Qualquer dúvida envie no seguinte endereço: anderson.anaya@4linux.com.br
