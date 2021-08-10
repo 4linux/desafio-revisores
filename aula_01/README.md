@@ -32,12 +32,12 @@ Estes são os Exemplos de configuração do **CentOS 8.x** que são compatíveis
 
 **Partição** | **Tamanho** | **Sistema de Arquivo** | **Ponto de Montagem**
 -------------|-------------|------------------------|----------------------
-/dev/sda1    |  50GB       |  ext4                  |       /
-/dev/sda5    |  20GB       |  ext4                  |       /var
-/dev/sda6    |  10GB       |  ext4                  |       /home
-/dev/sda7    |  5GB        |  ext4                  |       /var/log
-/dev/sda8    |  2,5GB      |  ext4                  |       /tmp
-/dev/sda9    |  2,5GB      |  swap                  |
+/dev/sda1    |  50GB       |          ext4          |       /
+/dev/sda5    |  20GB       |          ext4          |       /var
+/dev/sda6    |  10GB       |          ext4          |       /home
+/dev/sda7    |  5GB        |          ext4          |       /var/log
+/dev/sda8    |  2,5GB      |          ext4          |       /tmp
+/dev/sda9    |  2,5GB      |          swap          |
 
 
 ## Swap
@@ -51,13 +51,13 @@ O espaço **swap** geralmente é designado durante a instalação, mas determina
 Durante a instalação, você pode definir a quantidade de **swap** de acordo com a tabela abaixo de acordo com a quantidade de memória RAM que você possui. 
 
 
-Quantidade de RAM no Sistema |	Quantidade Recomendada de Espaço de Swap
------------------------------|--------------------------------------
-4GB de RAM ou menos          |	um mínimo de 2GB de espaço de swap
-4GB até 16GB de RAM          |	um mínimo de 4GB de espaço de swap
-16GB até 64GB de RAM         |	um mínimo de 8GB de espaço de swap
-64GB até 256GB de RAM        |	um mínimo de 16GB de espaço de swap
-256GB até 512GB de RAM       |	um mínimo de 32GB de espaço de swap 
+**Quantidade de RAM no Sistema** |	 **Quantidade Recomendada de Espaço de Swap**
+---------------------------------|--------------------------------------
+   4GB de RAM ou menos           |	  um mínimo de 2GB de espaço de swap
+   4GB até 16GB de RAM           |	  um mínimo de 4GB de espaço de swap
+   16GB até 64GB de RAM          |	  um mínimo de 8GB de espaço de swap
+   64GB até 256GB de RAM         |	  um mínimo de 16GB de espaço de swap
+   256GB até 512GB de RAM        |	  um mínimo de 32GB de espaço de swap 
 
 &nbsp;
 
@@ -279,10 +279,10 @@ All packages are up to date.
 root@localhost:~# apt upgrade  -y
 ```
 
-* **Configurações iniciais:** Configurações do Vim
+* **Configurações iniciais: Configurações do Vim**
 
 
-Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (vi improved) é hoje sem dúvida o melhor editor de arquivos pra quem trabalha diariamente com Linux. Sendo assim eu sempre instalo ele nos servidores que eu costumo trabalhar. Para instalar o vim em distribuições variadas de Debiam basta rodar o comando abaixo com direitos de root.
+Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (*vi improved*) é hoje sem dúvida o melhor editor de arquivos pra quem trabalha diariamente com Linux. Sendo assim você pode instalá-lo bos servidores em que eu costumo trabalhar. Para instalar o vim em distribuições variadas de Debian basta rodar o comando abaixo com direitos de root.
 
 * **Instale o Vim**:
 
@@ -314,7 +314,7 @@ set pumheight=15              " Máximo de palavras no popup de autocomplete
 set completeopt=menu,preview  " Como mostrar as possibilidade de inserção
 set spelllang=pt              " Escolhe o dicionário
 set foldenable                " Habilita agrupamento de blocos
-set foldcolumn=1              " Exibie coluna com + e - para agrupamentos
+set foldcolumn=1              " Exibe coluna com + e - para agrupamentos
 set foldmethod=marker         " Define agrupamento por marcas
 set foldmarker={,}            " Define marcas de agrupamento como { e }
 set foldlevel=9999            " Inicia com todos os agrupamentos abertos
@@ -444,7 +444,7 @@ set foldlevel=9999            " Inicia com todos os agrupamentos abertos
 
 #### Procedimentos comuns pós-instalação
 
-Segurança é um fator fundamental para o gerenciamento de servidores. Porém, muitas vezes, ele fica de lado, principalmente em projetos pequenos ou pessoais – e às vezes é necessário desabilitar o firewall no CentOS 7. No caso de distribuições Linux, muitas delas já possuem fortes políticas de segurança. Duas distribuições, o CentOS e o RHEL, são caracterizadas como opções seguras dentro do Linux devido a proteção multinível do SELinux.
+Segurança é um fator fundamental para o gerenciamento de servidores. Porém, muitas vezes, ele fica de lado, principalmente em projetos pequenos ou pessoais – e às vezes é necessário desabilitar o firewall no **CentOS** 7. No caso de distribuições Linux, muitas delas já possuem fortes políticas de segurança. Duas distribuições, o **CentOS** e o **RHEL**, são caracterizadas como opções seguras dentro do Linux devido a proteção multinível do **SELinux**.
 
 Entretanto, ter muitas medidas de segurança pode atrapalhar algumas tarefas rotineiras. E, por isso, às vezes é necessário desabilitar algumas delas.
 
@@ -473,7 +473,7 @@ Sep 24 23:16:35 localhost.localdomain systemd[1]: Started firewalld - dynamic f>
  # [Active: active (running) ***] means firewalld is running now
 ```
 
-Se você não precisar do serviço Firewall devido a alguns motivos como o fato de algumas máquinas Firewall estarem sendo executadas na rede local ou outras, é possível parar e desativar o serviço Firewall no servidor CentOS, como segue.
+Se você não precisar do serviço Firewall devido a alguns motivos como o fato de algumas máquinas Firewall estarem sendo executadas na rede local ou outras, é possível parar e desativar o serviço Firewall no servidor **CentOS**, como segue.
 
 stop service
 
