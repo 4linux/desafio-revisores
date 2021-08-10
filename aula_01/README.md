@@ -1,14 +1,14 @@
 # Instalação do Linux
 
-O sistema Linux vem sendo cada vez mais adotado em computadores dosmésticos e chegou a registrar uma participação de 3,61% no computadores do mundo, de acordo com dados da **NetMarketShare**. 
+O sistema Linux vem sendo cada vez mais adotado em computadores domésticos e chegou a registrar uma participação de 3,61% no computadores do mundo, de acordo com dados da **NetMarketShare**. 
 
-Pode parecer uma parcela pequena, mas corresponde a um recorde historico dos sistemas operacionais do tipo e reflete uma trajetória de alta, já que o anterior era de 3,17%.
+Pode parecer uma parcela pequena, mas corresponde a um recorde histórico dos sistemas operacionais do tipo e reflete uma trajetória de alta, já que o anterior era de 3,17%.
 
-Os usuários que cogitam trocar de sistema operacional e adotar a distribuição podem acabar com dúvidas recorrentes sobre quao seguro é o Linux, o que são termos como **Gnome** ou **KDE**, se há suporte para jogos ou qual o nível de oferta de apps para o sistema, por exemplo.
+Os usuários que cogitam trocar de sistema operacional e adotar a distribuição podem acabar com dúvidas recorrentes sobre quão seguro é o Linux, o que são termos como **Gnome** ou **KDE**, se há suporte para jogos ou qual o nível de oferta de apps para o sistema, por exemplo.
 
-Pensando nisso, nos aqui da **4Linux** preparamos com todos os detalhes uma maneira de voce ter seu Linux instalado.
+Pensando nisso, nós aqui da **4Linux** preparamos com todos os detalhes uma maneira de você ter seu Linux instalado.
 
-Instalar o Linux alguns anos atrás já foi uma tarefa bem desafiadora. Atualmente, é uma tarefa bem mais simples, mas requer atenção a alguns detalhes inportantes sobretudo em relação ao particionamento de disco. Não há um roteiro de instalação de Linux que serve para todos os casos de uso, mas deve-se ficar atento a boas práticas como:
+Instalar o Linux alguns anos atrás já foi uma tarefa bem desafiadora. Atualmente, é uma tarefa bem mais simples, mas requer atenção a alguns detalhes importantes sobretudo em relação ao particionamento de disco. Não há um roteiro de instalação de Linux que serve para todos os casos de uso, mas deve-se ficar atento a boas práticas como:
 
 * Isolar diretórios que tem gravação constante e que vários usuários utilizam, como, por exemplo: **home**, **tmp** a fim de não faltar espaço em disco para o sistema operacional;
 * Isolar o diretório **home** facilita o backup e restauração do sistema operacional após uma formatação e aplicação de cotas de disco;
@@ -44,20 +44,20 @@ Estes são os Exemplos de configuração do **CentOS 8.x** que são compatíveis
 
 Uma partição **swap** é usada para suportar a memória virtual. Em outras palavras, os dados são gravados numa partição **swap** quando não há memória RAM suficiente para armazenar os dados que seu sistema está processando.
 
-Nos últimos anos, a quantia de espaço de swap recomendada aumentou com a quantia de RAM no sistema. Mas como a quantidade de memória nos sistemas aumentou em centenas de gigabytes, é agora reconhecido que a quantidade de espaço swap que um sistema precisa é em função da carga de trabalho da memória executando naquele sistema.
+Nos últimos anos, a quantidade de espaço de **swap** recomendada aumentou com a quantidade de RAM no sistema. Mas como a quantidade de memória nos sistemas aumentou em centenas de gigabytes, é agora reconhecido que a quantidade de espaço **swap** que um sistema precisa é em função da carga de trabalho da memória executada naquele sistema.
 
 O espaço **swap** geralmente é designado durante a instalação, mas determinar a carga de trabalho desta memória de um sistema neste ponto pode ser difícil. 
 
-Durante a instalação, você pode definir a quantia de **swap** de acordo com a tabela abaixo de acordo com a quantidade de memória RAM que você possui. 
+Durante a instalação, você pode definir a quantidade de **swap** de acordo com a tabela abaixo de acordo com a quantidade de memória RAM que você possui. 
 
 
-Quantia de RAM no Sistema |	Quantia Recomendada de Espaço de Swap
---------------------------|--------------------------------------
-4GB de RAM ou menos |	um mínimo de 2GB de espaço de swap
-4GB até 16GB de RAM |	um mínimo de 4GB de espaço de swap
-16GB até 64GB de RAM |	um mínimo de 8GB de espaço swap
-64GB até 256GB de RAM |	um mínimo de 16GB de espaço swap.
-256GB até 512GB de RAM |	um mínimo de 32GB de espaço swap 
+Quantidade de RAM no Sistema |	Quantidade Recomendada de Espaço de Swap
+-----------------------------|--------------------------------------
+4GB de RAM ou menos          |	um mínimo de 2GB de espaço de swap
+4GB até 16GB de RAM          |	um mínimo de 4GB de espaço de swap
+16GB até 64GB de RAM         |	um mínimo de 8GB de espaço de swap
+64GB até 256GB de RAM        |	um mínimo de 16GB de espaço de swap
+256GB até 512GB de RAM       |	um mínimo de 32GB de espaço de swap 
 
 &nbsp;
 
@@ -232,20 +232,20 @@ Quantia de RAM no Sistema |	Quantia Recomendada de Espaço de Swap
 ![](imagens/Debian/084.png)
 
 
-#### Procedimentos comuns pós instalação
+#### Procedimentos comuns pós-instalação
 
 Se você acabou de instalar o Sistema Operacional, os passos a seguir podem ser efetuados, para melhor experiência de uso e comodidade.
 
 
 * **Configurações iniciais:** Atualizar sistema
 
-Mesmo que tenha instalado o sistema logo após seu lançamento, é interessante verificar se existe novas atualizações disponíveis.
+Mesmo que tenha instalado o sistema logo após seu lançamento, é interessante verificar se existem novas atualizações disponíveis.
 
 Para isso no Debian temos o APT. O APT controla o que é instalado no seu sistema.
 
 O principal arquivo de configuração que o APT usa pra decidir de quais fontes ele deve baixar pacotes é `/etc/apt/sources.list`, mas ele também pode usar arquivos do diretório `/etc/apt/sources.list.d/` - para detalhes, veja: https://manpages.debian.org/buster/apt/sources.list.5.en.html
 
-Aqui vai um exemplo do arquivo de repositorios do Debian:
+Aqui vai um exemplo do arquivo de repositórios do Debian:
 
 ```shell
 
@@ -282,9 +282,9 @@ root@localhost:~# apt upgrade  -y
 * **Configurações iniciais:** Configurações do Vim
 
 
-Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (vi improved) é hoje sem dúvida o melhor editor de arquivos pra quem trabalha diariamente com Linux. Sendo assim eu sempre estalo ele servidores que eu costumo trabalhar. Para instalar o vim em distribuições variadas de Debiam basta rodar o comando abaixo com direitos de root.
+Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (vi improved) é hoje sem dúvida o melhor editor de arquivos pra quem trabalha diariamente com Linux. Sendo assim eu sempre instalo ele nos servidores que eu costumo trabalhar. Para instalar o vim em distribuições variadas de Debiam basta rodar o comando abaixo com direitos de root.
 
-* Instale o Vim:
+* **Instale o Vim**:
 
 ```shell
 [root@localhost ~]# apt install vim -y
@@ -442,17 +442,17 @@ set foldlevel=9999            " Inicia com todos os agrupamentos abertos
 
 ![](imagens/CentOS/058.png)
 
-#### Procedimentos comuns pós instalação
+#### Procedimentos comuns pós-instalação
 
-Segurança é um fator fundamental para o gerenciamento de servidores. Porém, muitas vezes, ele fica de lado, principalmente em projetos pequenos ou pessoais – e às vezes é necessário desabilitar o firewall no Centos 7. No caso de distribuições Linux, muitas delas já possuem fortes políticas de segurança. Duas distribuições, o CentOS e o RHEL, são caracterizadas como opções seguras dentro do Linux devido a proteção multinível do SELinux.
+Segurança é um fator fundamental para o gerenciamento de servidores. Porém, muitas vezes, ele fica de lado, principalmente em projetos pequenos ou pessoais – e às vezes é necessário desabilitar o firewall no CentOS 7. No caso de distribuições Linux, muitas delas já possuem fortes políticas de segurança. Duas distribuições, o CentOS e o RHEL, são caracterizadas como opções seguras dentro do Linux devido a proteção multinível do SELinux.
 
-Entretanto, ter muitas medidas de segurança pode atrapalhar algumas tarefas rotineiras. E, por isso, as vezes é necessário desabilitar algumas delas.
+Entretanto, ter muitas medidas de segurança pode atrapalhar algumas tarefas rotineiras. E, por isso, às vezes é necessário desabilitar algumas delas.
 
 * **Firewall**
 
-Um firewall faz o filtro de pacotes que passam na rede. Para configurar um firewall é necessário o conhecimento sobre a estrutura da rede em questão e dos diferentes protocolos envolvidos na comunicação, isto é, dos serviços que a rede usa para que eles não percam a comunicação.  O objetivo em ter uma máquina fazendo o papel de Firewall Gateway em nossa é rede é minimizar as tentativas de ataques que elas recebem, tentando impedir possíveis invasões e levantamento de informações.
+Um firewall faz o filtro de pacotes que passam na rede. Para configurar um firewall é necessário o conhecimento sobre a estrutura da rede em questão e dos diferentes protocolos envolvidos na comunicação, isto é, dos serviços que a rede usa para que eles não percam a comunicação.  O objetivo em ter uma máquina fazendo o papel de Firewall (Gateway) em nossa rede é minimizar as tentativas de ataques que elas recebem, tentando impedir possíveis invasões e levantamento de informações.
 
-É possível mostrar o status do serviço FireWall da seguinte maneira. (ativado por padrão)
+É possível mostrar o status do serviço Firewall da seguinte maneira. (ativado por padrão)
 
 ```shell
 [root@localhost ~]# systemctl status firewalld
@@ -473,7 +473,7 @@ Sep 24 23:16:35 localhost.localdomain systemd[1]: Started firewalld - dynamic f>
  # [Active: active (running) ***] means firewalld is running now
 ```
 
-Se você não precisar do serviço FireWall devido a alguns motivos como o fato de algumas máquinas FireWall estarem sendo executadas na rede local ou outras, é possível parar e desativar o serviço FireWall no servidor CentOS, como segue.
+Se você não precisar do serviço Firewall devido a alguns motivos como o fato de algumas máquinas Firewall estarem sendo executadas na rede local ou outras, é possível parar e desativar o serviço Firewall no servidor CentOS, como segue.
 
 stop service
 
@@ -498,9 +498,9 @@ O SELinux é gerenciado através de algumas regras chamadas “políticas”, qu
 
 A ferramenta atualmente possui três modos:
 
-* O modo Enforcing nega todos os acessos não autorizados. Neste modo, o SELinux é considerado como habilitado.
-* No modo Permissive, diferente do modo anterior, é permitido o acesso não autorizado mas com a exibição de avisos.
-* Em modo Disable o SELinux está desabilitado e permite todos os acessos sem avisos.
+* O modo **Enforcing** nega todos os acessos não autorizados. Neste modo, o SELinux é considerado como habilitado.
+* No modo **Permissive**, diferente do modo anterior, é permitido o acesso não autorizado mas com a exibição de avisos.
+* Em modo **Disable** o SELinux está desabilitado e permite todos os acessos sem avisos.
 
 
 É possível desabilitar o SELinux temporariamente ou permanentemente, cada um com seus benefícios. Desabilitar temporariamente permite realizar testes sem precisar sacrificar a segurança do sistema. Assim que o sistema é reiniciado, o SELinux é ativado novamente.
@@ -540,7 +540,7 @@ Se você ativar o SELinux, há casos para modificar a política do SELinux manua
 [root@localhost ~]# reboot
 ```
 
-* Configurações iniciais: Atualizar sistema
+* **Configurações iniciais: Atualizar sistema**
 
 A ferramenta de gerenciamento de pacotes DNF (Dandified YUM) foi definida como padrão no RHEL 8 / CentOS 8.
 
@@ -653,9 +653,9 @@ Nada para fazer.
 Concluído!
 ```
 
-* Configurações iniciais: Configurações do Vim
+* **Configurações iniciais: Configurações do Vim**
 
-Existem muitos casos para usar o editor de texto no terminal, por isso é mais conveniente instalar editor com recursos avançados como o Vim.
+Existem muitos casos para usar o editor de texto no terminal, por isso é mais conveniente instalar um editor com recursos avançados como o Vim.
 
 Instalar o Vim:
 
@@ -698,7 +698,7 @@ set pumheight=15              " Máximo de palavras no popup de autocomplete
 set completeopt=menu,preview  " Como mostrar as possibilidade de inserção
 set spelllang=pt              " Escolhe o dicionário
 set foldenable                " Habilita agrupamento de blocos
-set foldcolumn=1              " Exibie coluna com + e - para agrupamentos
+set foldcolumn=1              " Exibe coluna com + e - para agrupamentos
 set foldmethod=marker         " Define agrupamento por marcas
 set foldmarker={,}            " Define marcas de agrupamento como { e }
 set foldlevel=9999            " Inicia com todos os agrupamentos abertos
