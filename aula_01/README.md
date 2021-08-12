@@ -1,32 +1,32 @@
 # Instalação do Linux
 
-O sistema Linux vem sendo cada vez mais adotado em computadores dosmésticos e chegou a registrar uma participação de 3,61% no computadores do mundo, de acordo com dados da **NetMarketShare**. 
+O sistema operacional Linux vem sendo cada vez mais utilizado para fins domésticos e chegou a registrar uma participação de 3,61% nos computadores do mundo, de acordo com dados da **NetMarketShare**.
 
-Pode parecer uma parcela pequena, mas corresponde a um recorde historico dos sistemas operacionais do tipo e reflete uma trajetória de alta, já que o anterior era de 3,17%.
+Apesar de parecer uma parcela pequena, esse número corresponde à um recorde histórico entre os sistemas operacionais desse tipo e reflete uma longa trajetória, já que sua participação anterior era de 3,17%.
 
-Os usuários que cogitam trocar de sistema operacional e adotar a distribuição podem acabar com dúvidas recorrentes sobre quao seguro é o Linux, o que são termos como **Gnome** ou **KDE**, se há suporte para jogos ou qual o nível de oferta de apps para o sistema, por exemplo.
+Os usuários que cogitam trocar de sistema operacional e adotar uma distribuição Linux podem se deparar com algumas dúvidas recorrentes, como: questões de segurança, o significado de termos como **Gnome** ou **KDE**, se há suporte para jogos ou o nível de oferta de aplicativos para o sistema.
 
-Pensando nisso, nos aqui da **4Linux** preparamos com todos os detalhes uma maneira de voce ter seu Linux instalado.
+Pensando nisso, nós aqui da **4Linux** preparamos um guia detalhado para você instalar seu Linux.
 
-Instalar o Linux alguns anos atrás já foi uma tarefa bem desafiadora. Atualmente, é uma tarefa bem mais simples, mas requer atenção a alguns detalhes inportantes sobretudo em relação ao particionamento de disco. Não há um roteiro de instalação de Linux que serve para todos os casos de uso, mas deve-se ficar atento a boas práticas como:
+Instalar o Linux há alguns anos era uma tarefa bem desafiadora. Atualmente, isso pode ser feito de forma bem simples, mas alguns detalhes ainda exigem atenção, principalmente em relação ao particionamento de disco. Não há um roteiro de instalação de Linux que sirva para todos os casos de uso, mas é importante estar atento às boas práticas como:
 
-* Isolar diretórios que tem gravação constante e que vários usuários utilizam, como, por exemplo: **home**, **tmp** a fim de não faltar espaço em disco para o sistema operacional;
+* Isolar diretórios que têm gravação constante e que são utilizados por vários usuários a fim de evitar faltar espaço em disco para o sistema operacional, como, por exemplo: **home** e **tmp**;
 * Isolar o diretório **home** facilita o backup e restauração do sistema operacional após uma formatação e aplicação de cotas de disco;
-* Isolar o diretório **tmp** permite aplicar estratégias de segurança como desabilitar execução de scripts maliciosos nesta pasta uma vez que todo usuário pode executar scripts neste diretório;
-* Isolar o diretório **/var/log** em uma partição para garantir que ele sempre terá um espaço mínimo para gravar registros de sistemas e de aplicações;
+* Isolar o diretório **tmp** permite aplicar estratégias de segurança, como desabilitar a execução de scripts maliciosos nesta pasta, uma vez que todo usuário pode executar scripts neste diretório;
+* Isolar o diretório **/var/log** em uma partição garante que ele sempre terá um espaço mínimo para gravar registros de sistemas e de aplicações;
 
 
 ## Introdução
 
 Faça o download do Debian **GNU/Linux 10 Buster** (lançado em 06 de julho de 2019) no seguinte site: http://cdimage.debian.org/debian-cd/
 
-Estes são os Exemplos de configuração do **CentOS 8.x** que são compatíveis com o **Red Hat Enterprise Linux 8.x**. O **CentOS 8** foi lançado em 24 de setembro de 2019 e será suportado até maio de 2029. Faça o download do arquivo ISO do **CentOS 8.1** para instalação no site a seguir. https://mirrors.oit.uci.edu/centos/8.1.1911/isos/x86_64/
+Estes são os exemplos de configuração do **CentOS 8.x** que são compatíveis com o **Red Hat Enterprise Linux 8.x**. O **CentOS 8** foi lançado em 24 de setembro de 2019 e será suportado até maio de 2029. Faça o download do arquivo ISO do **CentOS 8.1** para instalação no site a seguir: https://mirrors.oit.uci.edu/centos/8.1.1911/isos/x86_64/
 
 
 ## Esquema de particionamento de disco
 
-* **Tamanho do disco para máquina virtual**: 100 GB
-* **Quantidade de partições**: 6
+* **Tamanho do disco para máquina virtual**: 100 GB;
+* **Quantidade de partições**: 6;
 
 &nbsp;
 
@@ -44,20 +44,20 @@ Estes são os Exemplos de configuração do **CentOS 8.x** que são compatíveis
 
 Uma partição **swap** é usada para suportar a memória virtual. Em outras palavras, os dados são gravados numa partição **swap** quando não há memória RAM suficiente para armazenar os dados que seu sistema está processando.
 
-Nos últimos anos, a quantia de espaço de swap recomendada aumentou com a quantia de RAM no sistema. Mas como a quantidade de memória nos sistemas aumentou em centenas de gigabytes, é agora reconhecido que a quantidade de espaço swap que um sistema precisa é em função da carga de trabalho da memória executando naquele sistema.
+Nos últimos anos, o espaço recomendado para o **swap** aumentou de acordo com a memória RAM do sistema. Entretanto, como a quantidade de memória nos sistemas aumentou em centenas de gigabytes, é agora reconhecido que a quantidade de espaço **swap** que um sistema precisa é baseada na carga de trabalho da memória executando naquele sistema.
 
-O espaço **swap** geralmente é designado durante a instalação, mas determinar a carga de trabalho desta memória de um sistema neste ponto pode ser difícil. 
+O espaço **swap** geralmente é designado durante a instalação, porém determinar a carga de trabalho da memória do sistema neste ponto pode ser difícil.
 
-Durante a instalação, você pode definir a quantia de **swap** de acordo com a tabela abaixo de acordo com a quantidade de memória RAM que você possui. 
+Durante a instalação, você pode definir a quantia de **swap** de acordo com a tabela abaixo considerando a quantidade de memória RAM que você possui. 
 
 
-Quantia de RAM no Sistema |	Quantia Recomendada de Espaço de Swap
---------------------------|--------------------------------------
-4GB de RAM ou menos |	um mínimo de 2GB de espaço de swap
-4GB até 16GB de RAM |	um mínimo de 4GB de espaço de swap
-16GB até 64GB de RAM |	um mínimo de 8GB de espaço swap
-64GB até 256GB de RAM |	um mínimo de 16GB de espaço swap.
-256GB até 512GB de RAM |	um mínimo de 32GB de espaço swap 
+**Quantia de RAM no Sistema** |	**Quantia Recomendada de Espaço de Swap**
+------------------------------|--------------------------------------
+4GB ou menos de RAM           |	um mínimo de 2GB de espaço de swap
+4GB até 16GB de RAM           |	um mínimo de 4GB de espaço de swap
+16GB até 64GB de RAM          |	um mínimo de 8GB de espaço swap
+64GB até 256GB de RAM         |	um mínimo de 16GB de espaço swap
+256GB até 512GB de RAM        |	um mínimo de 32GB de espaço swap 
 
 &nbsp;
 
@@ -232,20 +232,20 @@ Quantia de RAM no Sistema |	Quantia Recomendada de Espaço de Swap
 ![](imagens/Debian/084.png)
 
 
-#### Procedimentos comuns pós instalação
+#### Procedimentos comuns pós-instalação
 
-Se você acabou de instalar o Sistema Operacional, os passos a seguir podem ser efetuados, para melhor experiência de uso e comodidade.
+Se você já instalou o sistema operacional, os passos a seguir podem ser efetuados para melhorar a experiência de uso e comodidade.
 
 
 * **Configurações iniciais:** Atualizar sistema
 
-Mesmo que tenha instalado o sistema logo após seu lançamento, é interessante verificar se existe novas atualizações disponíveis.
+Mesmo que você tenha instalado o sistema logo após seu lançamento, é interessante verificar se novas atualizações estão disponíveis.
 
-Para isso no Debian temos o APT. O APT controla o que é instalado no seu sistema.
+Para isso, no Debian temos o APT. O APT controla o que é instalado no seu sistema.
 
-O principal arquivo de configuração que o APT usa pra decidir de quais fontes ele deve baixar pacotes é `/etc/apt/sources.list`, mas ele também pode usar arquivos do diretório `/etc/apt/sources.list.d/` - para detalhes, veja: https://manpages.debian.org/buster/apt/sources.list.5.en.html
+O principal arquivo de configuração usado pelo APT para decidir de quais fontes ele deve baixar pacotes é `/etc/apt/sources.list`, mas ele também pode usar arquivos do diretório `/etc/apt/sources.list.d/` - para mais detalhes, veja: https://manpages.debian.org/buster/apt/sources.list.5.en.html
 
-Aqui vai um exemplo do arquivo de repositorios do Debian:
+Abaixo temos um exemplo do arquivo de repositórios do Debian:
 
 ```shell
 
@@ -282,7 +282,7 @@ root@localhost:~# apt upgrade  -y
 * **Configurações iniciais:** Configurações do Vim
 
 
-Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (vi improved) é hoje sem dúvida o melhor editor de arquivos pra quem trabalha diariamente com Linux. Sendo assim eu sempre estalo ele servidores que eu costumo trabalhar. Para instalar o vim em distribuições variadas de Debiam basta rodar o comando abaixo com direitos de root.
+Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (vi improved) é hoje, sem dúvida, o melhor editor de arquivos para quem trabalha diariamente com Linux. Sendo assim, eu sempre instalo ele em servidores que eu costumo trabalhar. Para instalar o vim em distribuições variadas de Debian basta rodar o comando abaixo com direitos de root.
 
 * Instale o Vim:
 
@@ -290,7 +290,7 @@ Toda distribuição Linux já vem com o `vi` instalado, entretanto o vim (vi imp
 [root@localhost ~]# apt install vim -y
 ```
 
-Além disso eu também configuro o vim para que ele faça um destaque maior nos arquivos enquanto eu estiver editando. Para isso edite o arquivo vimrc que esta dentro da pasta /etc/vim conforme os comandos abaixo.
+Além disso, eu também configuro o vim para que ele faça um destaque maior nos arquivos durante a edição. Para isso, edite o arquivo `vimrc` que está dentro da pasta `/etc/vim` conforme os comandos abaixo:
 
 ```shell
  [root@localhost ~]# vi ~/.vimrc
@@ -442,15 +442,15 @@ set foldlevel=9999            " Inicia com todos os agrupamentos abertos
 
 ![](imagens/CentOS/058.png)
 
-#### Procedimentos comuns pós instalação
+#### Procedimentos comuns pós-instalação
 
-Segurança é um fator fundamental para o gerenciamento de servidores. Porém, muitas vezes, ele fica de lado, principalmente em projetos pequenos ou pessoais – e às vezes é necessário desabilitar o firewall no Centos 7. No caso de distribuições Linux, muitas delas já possuem fortes políticas de segurança. Duas distribuições, o CentOS e o RHEL, são caracterizadas como opções seguras dentro do Linux devido a proteção multinível do SELinux.
+Segurança é um fator fundamental para o gerenciamento de servidores. Entretanto, acaba sendo deixado de lado, principalmente em projetos pequenos ou pessoais – e, às vezes, é necessário desabilitar o FireWall no CentOS 7. Muitas distribuições já possuem fortes políticas de segurança e duas delas, o CentOS e o RHEL, são consideradas opções seguras dentro do Linux devido à proteção multinível do SELinux.
 
-Entretanto, ter muitas medidas de segurança pode atrapalhar algumas tarefas rotineiras. E, por isso, as vezes é necessário desabilitar algumas delas.
+Entretanto, ter muitas medidas de segurança pode atrapalhar algumas tarefas rotineiras. E, por isso, pode ser necessário desabilitar algumas delas.
 
 * **Firewall**
 
-Um firewall faz o filtro de pacotes que passam na rede. Para configurar um firewall é necessário o conhecimento sobre a estrutura da rede em questão e dos diferentes protocolos envolvidos na comunicação, isto é, dos serviços que a rede usa para que eles não percam a comunicação.  O objetivo em ter uma máquina fazendo o papel de Firewall Gateway em nossa é rede é minimizar as tentativas de ataques que elas recebem, tentando impedir possíveis invasões e levantamento de informações.
+Um FireWall faz o filtro de pacotes que passam na rede. Para configurar um FireWall é necessário conhecer a estrutura da rede em questão e dos diferentes protocolos envolvidos na comunicação, isto é, dos serviços que a rede usa, para que eles não percam a comunicação. A finalidade de ter uma máquina fazendo o papel de Firewall Gateway em nossa rede é minimizar as tentativas de ataques que elas recebem, tentando impedir possíveis invasões e levantamento de informações.
 
 É possível mostrar o status do serviço FireWall da seguinte maneira. (ativado por padrão)
 
@@ -473,7 +473,7 @@ Sep 24 23:16:35 localhost.localdomain systemd[1]: Started firewalld - dynamic f>
  # [Active: active (running) ***] means firewalld is running now
 ```
 
-Se você não precisar do serviço FireWall devido a alguns motivos como o fato de algumas máquinas FireWall estarem sendo executadas na rede local ou outras, é possível parar e desativar o serviço FireWall no servidor CentOS, como segue.
+Se você não precisar do serviço FireWall por algum motivo, como no caso de algumas máquinas FireWall estarem sendo executadas na rede local ou outras, é possível parar e desativar esse serviço no servidor CentOS, como mostrado abaixo.
 
 stop service
 
@@ -492,20 +492,20 @@ Removed /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 
 * **SELinux**
 
-O SELinux é uma ferramenta de segurança que restringe o acesso à módulos específicos do Kernel. Algumas distribuições Linux, como CentOS e RHEL, já trazem o firewall implementado por padrão como uma medida de segurança extra no sistema. Outras distribuições, como Debian, também permitem sua instalação.
+O SELinux é uma ferramenta de segurança que restringe o acesso à módulos específicos do Kernel. Algumas distribuições Linux, como CentOS e RHEL, já trazem o FireWall implementado por padrão como uma medida de segurança extra no sistema. Outras distribuições, como Debian, também permitem sua instalação.
 
 O SELinux é gerenciado através de algumas regras chamadas “políticas”, que restringem ou permitem o uso de certas aplicações para partes essenciais do sistema. O problema é que criar essas políticas é muito difícil.
 
 A ferramenta atualmente possui três modos:
 
-* O modo Enforcing nega todos os acessos não autorizados. Neste modo, o SELinux é considerado como habilitado.
-* No modo Permissive, diferente do modo anterior, é permitido o acesso não autorizado mas com a exibição de avisos.
-* Em modo Disable o SELinux está desabilitado e permite todos os acessos sem avisos.
+* O modo Enforcing nega todos os acessos não autorizados. Neste modo, o SELinux é considerado habilitado.
+* No modo Permissive, diferentemente do modo anterior, o acesso não autorizado é permitido, mas com a exibição de avisos.
+* Em modo Disabled, o SELinux está desabilitado e permite todos os acessos sem avisos.
 
 
-É possível desabilitar o SELinux temporariamente ou permanentemente, cada um com seus benefícios. Desabilitar temporariamente permite realizar testes sem precisar sacrificar a segurança do sistema. Assim que o sistema é reiniciado, o SELinux é ativado novamente.
+É possível desabilitar o SELinux temporariamente ou permanentemente, cada um com seus benefícios. Desabilitar temporariamente permite realizar testes sem comprometer a segurança do sistema. Assim que o sistema é reiniciado, o SELinux é ativado novamente.
 
-Por outro lado, desativar o firewall permanentemente torna possível trabalhar mais rápido, principalmente em projetos pequenos ou médios. É importante lembrar que atualmente as distribuições do Linux possuem ótimas políticas de segurança, então desativar o SELinux não é tão prejudicial.
+Por outro lado, desativar o FireWall permanentemente possibilita trabalhar mais rápido, principalmente em projetos pequenos ou médios. É importante ressaltar que atualmente as distribuições do Linux possuem ótimas políticas de segurança, então desativar o SELinux não é tão prejudicial.
 
 É possível mostrar o status atual do SELinux (Security-Enhanced Linux) da seguinte maneira. (ativado por padrão)
 
@@ -514,7 +514,7 @@ Por outro lado, desativar o firewall permanentemente torna possível trabalhar m
 Enforcing     # SELinux is enabled
 ```
 
-Se você ativar o SELinux, há casos para modificar a política do SELinux manualmente, porque algumas vezes o SELinux interrompe os aplicativos. Se você não precisar do recurso SELinux por alguns motivos, como o servidor estar executando apenas na Rede de segurança local ou outros, é possível desativar o SELinux da seguinte forma.
+Se você ativar o SELinux, há casos para modificar sua política manualmente, pois algumas vezes este interrompe os aplicativos. Se você não precisar do recurso SELinux por algum motivo, como o servidor estar executando apenas na rede de segurança local ou outros, é possível desativá-lo da seguinte forma:
 
 ```shell
  [root@localhost ~]# vim /etc/selinux/config
@@ -655,7 +655,7 @@ Concluído!
 
 * Configurações iniciais: Configurações do Vim
 
-Existem muitos casos para usar o editor de texto no terminal, por isso é mais conveniente instalar editor com recursos avançados como o Vim.
+O editor de texto no terminal é útil em vários casos, por isso é conveniente instalar o editor com recursos avançados como o Vim.
 
 Instalar o Vim:
 
@@ -663,7 +663,7 @@ Instalar o Vim:
 [root@localhost ~]# dnf -y install vim-enhanced 
 ```
 
-Defina o **alias** de comando pro seu próprio ambiente:
+Defina o **alias** de comando para o seu próprio ambiente:
 
 ```shell
 [root@localhost ~]# vi ~/.bashrc
